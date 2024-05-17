@@ -1,24 +1,27 @@
 const Router = require("express").Router;
 const router = Router();
-
-//get
+const estoqueController = require("../controllers/estoqueController.js");
 
 router.get("/estoque/produtos", (req, res) =>{
-    res.send("get")
+    const resposta = estoqueController.listar();
+    res.send(resposta);
 });
 
 router.post("/estoque/produtos", (req,res) =>{
-    res.send("post");
+    const resposta = estoqueController.criar();
+    res.send(resposta);
 });
 
 router.put("/estoque/produto/:id", (req,res) =>{
     const {id} = req.params;
-    res.send(`put ${id}`);
+    const resposta = estoqueController.alterar(id);
+    res.send(resposta);
 });
 
 router.delete("/estoque/produto/:id", (req,res) =>{
     const {id} = req.params;
-    res.send(`delete ${id}`);
+    const resposta = estoqueController.excluir(id);
+    res.send(resposta);
 });
 
 module.exports = router;

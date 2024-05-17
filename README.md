@@ -38,7 +38,13 @@ E abra [http://localhost:8080](http://localhost:8080) com seu navegador.
 
 Caso não tenha o MySQL instalado, baixe o instalador no [site oficial](https://dev.mysql.com/downloads/mysql/) e execute a instalação de acordo com o seu sistema operacional. 
 
+O dump está no arquivo script.sql
+
 #### Observações
 - Durante esse processo, sempre ocorriam erros quando eu tentava conectar no banco. Para solucioná-los, executei o comando: `npm install mysql2` e atualizei a requisição no arquivo connect.js
 
 - Nas configurações de conexão, minha senha é "macaco" porque corresponde ao que eu coloquei no MySQL, já que não consegui deixá-la vazia. Se for utilizar o código, use o usuário e a senha correspondentes às suas configurações do banco de dados.
+
+### Material de referência
+
+- [Playlist: CRUD - Node JS com Express e MYSQL](https://youtube.com/playlist?list=PLrnHpYM1USWy-aOQFOCOrU0bVkIsflEz-&si=503tZZ3-e7BOBbWb)
