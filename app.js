@@ -1,25 +1,22 @@
 const express = require('express')
-const app = express()
+const app = express();
 const port = 8080;
-const router = require('./routes');
+const router = require('./routers/estoqueRoute.js');
+const connection = require('./config/connect.js');
+const tables = require('./config/tables.js');
 
-app.use(express.json()); 
+tables.init(connection);
 
-connection.connect(function(err) {
-  if (err) {
-      console.error('Erro ao conectar ao MySQL:', err);
-      return;
-  }
-  console.log('Conectado ao MySQL com sucesso!');
-});
-
-
-app.use('/api', router);
+app.use(router);
 
 app.get('/', (req, res) => {
   res.send('Funcionando')
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+app.listen(port, (error) => {
+  if(error){
+    console.log(`Erro`);
+    return;
+  }
+  console.log(`Rodando na porta ${port}`)
 })

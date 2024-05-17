@@ -2,7 +2,7 @@ CREATE DATABASE estoque;
 
 USE estoque;
 
-CREATE TABLE produtos (
+CREATE TABLE IF NOT EXISTS produtos (
   id INT AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(60) NOT NULL,
   descricao VARCHAR(150),
