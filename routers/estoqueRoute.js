@@ -16,7 +16,7 @@ router.post("/estoque/produtos", (req,res) =>{
 router.put("/estoque/produto/:id", (req,res) =>{
     const {id} = req.params;
     const produtoAtualizado = req.body;
-    const produto = estoqueController.editar(produtoAtualizado, id);
+    const produto = estoqueController.alterar(produtoAtualizado, id);
     produto.then(produtoEditado => res.status(201).json(produtoEditado)).catch(error => res.status(400).json(error.message));
 });
 

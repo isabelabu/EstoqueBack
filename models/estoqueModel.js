@@ -46,7 +46,7 @@ class estoqueModel{
     }
 
     excluir(produtoExcluido, id){
-        const sql = "DELETE FROM produtos SET ? WHERE id = ?";
+        const sql = "DELETE FROM produtos WHERE id = ?";
         return new Promise((resolve, reject) => {
             connection.query(sql, [produtoExcluido, id], (error, resposta) => {
                 if(error){

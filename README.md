@@ -45,6 +45,19 @@ O dump está no arquivo script.sql
 
 - Nas configurações de conexão, minha senha é "macaco" porque corresponde ao que eu coloquei no MySQL, já que não consegui deixá-la vazia. Se for utilizar o código, use o usuário e a senha correspondentes às suas configurações do banco de dados.
 
+### Problemas
+
+Editar e excluir não estão funcionando, já que o sistema sempre retorna um erro de sintaxe que não consegui resolver:
+
+```bash
+# put 
+"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id = '2'' at line 1" 
+
+# delete
+"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1"
+```
+
+
 ### Material de referência
 
 - [Playlist: CRUD - Node JS com Express e MYSQL](https://youtube.com/playlist?list=PLrnHpYM1USWy-aOQFOCOrU0bVkIsflEz-&si=503tZZ3-e7BOBbWb)
