@@ -5,6 +5,9 @@ const router = require('./routers/estoqueRoute.js');
 const connection = require('./config/connect.js');
 const tables = require('./config/tables.js');
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
 tables.init(connection);
 
 app.use(router);

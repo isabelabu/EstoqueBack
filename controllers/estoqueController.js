@@ -1,9 +1,11 @@
+const estoqueModel = require("../models/estoqueModel");
+
 class estoqueController{
     listar(){
-        return "Listando produtos";
+        return estoqueModel.listar();
     }
-    criar(){
-        return "Criando produto";
+    criar(novoProduto){
+        return estoqueModel.criar(novoProduto);
     }
     alterar(id){
         return "Alterando produto " + id;

@@ -3,13 +3,14 @@ const router = Router();
 const estoqueController = require("../controllers/estoqueController.js");
 
 router.get("/estoque/produtos", (req, res) =>{
-    const resposta = estoqueController.listar();
-    res.send(resposta);
+    const listaProdutos = estoqueController.listar();
+    listaProdutos.then(listaProdutos => res.status(200).json(listaProdutos)).catch(error => res.status(400).json(error.message));
 });
 
 router.post("/estoque/produtos", (req,res) =>{
-    const resposta = estoqueController.criar();
-    res.send(resposta);
+    const novoProduto = req.body;
+    const produto = estoqueController.criar(novoProduto);
+    produto.then(produtoCriado => res.status(201).json(produtoCriado)).catch(error => res.status(400).json(error.message));
 });
 
 router.put("/estoque/produto/:id", (req,res) =>{
