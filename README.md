@@ -3,22 +3,24 @@
 
 Esse é o repositório que contém o Back-End do case proposto pelo processo seletivo da MindGroup.
 
+[Clique aqui para ver o front-end.](https://github.com/isabelabu/EstoqueFront)
+
 ## 🎯 Desafio 
 
 Contexto: Sistema de estoque 
 
 **Requisitos:**
-- Registrar, visualizar, editar e remover produtos
-- Entrada e saída de produtos
-- Login e cadastro de usuários
-- Projeto deve ser feito em ReactJS ou React Native 
-- O backend deve ser feito com NodeJS Express
-- O banco de dados deve ser MySQL
-- O produto deve ter as propriedades de nome, descrição, imagem, valor, quantidade atual.
-- O usuário deve ter nome, email e senha.
-- As senhas de acesso precisam ser criptografadas com bcrypt
-- O TypeScript deve ser utilizado como linguagem no projeto
-- O dump do banco de dados precisa estar junto com o projeto
+- Registrar, visualizar, editar e remover produtos.
+- Entrada e saída de produtos.
+- Login e cadastro de usuários.
+- O projeto deve ser feito em ReactJS ou React Native. ✅
+- O backend deve ser feito com NodeJS Express. ✅
+- O banco de dados deve ser MySQL. ✅
+- O produto deve ter as propriedades de nome, descrição, imagem, valor, quantidade atual. ✅
+- O usuário deve ter nome, email e senha. ✅
+- As senhas de acesso precisam ser criptografadas com bcrypt.
+- O TypeScript deve ser utilizado como linguagem no projeto ✅
+- O dump do banco de dados precisa estar junto com o projeto ✅
 
 ## 📌 Sobre o repositório
 
@@ -57,6 +59,8 @@ Editar e excluir não estão funcionando, já que o sistema sempre retorna um er
 "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1"
 ```
 Considerei usar o mysql em vez do mysql2 para resolver o problema de sintaxe, porém ele não aceita o protocolo de autenticação do servidor. Achei que seria melhor manter dessa forma, porque pelo menos sei que o `get` e o `post` estão funcionando.
+
+Apesar de existir no banco de dados, a tabela de usuários não é utilizada, já que eu também não consegui fazer uma página de login no front-end e nem realizar a autenticação solicitada.
 
 ### Material de referência
 
