@@ -7,11 +7,11 @@ class estoqueController{
     criar(novoProduto){
         return estoqueModel.criar(novoProduto);
     }
-    alterar(id){
-        return "Alterando produto " + id;
+    alterar(produtoAtualizado, id){
+        return estoqueModel.editar(produtoAtualizado, id);
     }
-    excluir(id){
-        return "Excluindo produto " + id;
+    excluir(produtoExcluido, id){
+        return estoqueModel.excluir(produtoExcluido, id);
     }
 }
 

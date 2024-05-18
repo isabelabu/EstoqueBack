@@ -15,14 +15,16 @@ router.post("/estoque/produtos", (req,res) =>{
 
 router.put("/estoque/produto/:id", (req,res) =>{
     const {id} = req.params;
-    const resposta = estoqueController.alterar(id);
-    res.send(resposta);
+    const produtoAtualizado = req.body;
+    const produto = estoqueController.editar(produtoAtualizado, id);
+    produto.then(produtoEditado => res.status(201).json(produtoEditado)).catch(error => res.status(400).json(error.message));
 });
 
 router.delete("/estoque/produto/:id", (req,res) =>{
     const {id} = req.params;
-    const resposta = estoqueController.excluir(id);
-    res.send(resposta);
+    const produtoExcluido = req.body;
+    const produto = estoqueController.excluir(produtoExcluido, id);
+    produto.then(produtoDeletado => res.status(201).json(produtoDeletado)).catch(error => res.status(400).json(error.message));
 });
 
 module.exports = router;
