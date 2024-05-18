@@ -56,8 +56,9 @@ Editar e excluir não estão funcionando, já que o sistema sempre retorna um er
 # delete
 "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1"
 ```
-
+Considerei usar o mysql em vez do mysql2 para resolver o problema de sintaxe, porém ele não aceita o protocolo de autenticação do servidor. Achei que seria melhor manter dessa forma, porque pelo menos sei que o `get` e o `post` estão funcionando.
 
 ### Material de referência
 
 - [Playlist: CRUD - Node JS com Express e MYSQL](https://youtube.com/playlist?list=PLrnHpYM1USWy-aOQFOCOrU0bVkIsflEz-&si=503tZZ3-e7BOBbWb)
+- [Repositório do projeto criado nas videoaulas da playlist](https://github.com/andrevitor103/Controle-atendimentos-NodeJS-curso-youtube)
